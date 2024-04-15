@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>1st Paragraph</p>
+    <p>2nd Paragraph</p>
+    <button onclick="ChangeBackground()">Just Click</button>
+</body>
+<script>
+    function ChangeBackground() {
+        let para2 = document.getElementsByTagName('p');
+        para2[1].style.backgroundColor = 'yellow';
+        para2[1].style.fontSize = '20px';
+        para2[1].style.fontWeight = '600px';
+        para2[1].style.padding = '20px';
+    }
+</script>
+</html>

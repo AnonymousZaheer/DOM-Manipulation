@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+    <script>
+        window.onload = () => {
+            let heading1 = document.createElement('h3');
+            let ptext = document.createTextNode('Printing Tables from One to Ten');
+            heading1.appendChild(ptext);
+            document.body.appendChild(heading1);
+            for (let i = 1; i < 11; i++) {
+                const para = document.createElement('p');
+                for (let j = 1; j < 11; j++) {
+                    const text = document.createTextNode(i+"x"+j+"="+i*j+" ");
+                    para.appendChild(text);
+                    document.body.appendChild(para);
+                }
+            } 
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!--Adding and Removing Child Container in the Parent Container.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="parentContainer">Parent</div>
+        <button onclick="addingChild()">Add Child</button>
+        <button onclick="removingChild()">Remove Child</button>
+    </div>
+
+</body>
+<script>
+    let PC = document.querySelector('.parentContainer');
+    function addingChild() {
+        if (PC.childNodes.length>1) {
+            return;
+        }
+        // CC = Creating Child Container
+        let CC = document.createElement('div');
+        CC.classList.add('childClass');
+        CC.textContent = 'Child Container';
+        PC.appendChild(CC);
+    }
+    function removingChild() {
+        let accessingChildClass = document.querySelector('.childClass');
+        PC.removeChild(accessingChildClass);
+    }
+    
+</script>
+</html>

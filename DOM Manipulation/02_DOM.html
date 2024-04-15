@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation 2</title>
+    <style>
+        .handling_body{
+            background-color:black;
+            color:white;
+            text-align: center;;
+        }
+    </style>
+    <script>
+
+        // ---------------> Bellow content run in console of browser <---------------------
+
+        // document.getElementById('title').id;
+        // document.getElementById('title').className;  use to see how many html tags are using this class name.
+        // document.getElementById('title').getAttribute('class');
+        // document.getElementById('title').setAttribute('class','fast heading');
+        // const value = document.getElementById('title');
+        // value.style.color='red';
+        // value.textContent; (Result) ('DOM Manipulation This is hidden text is taking place...')
+        // value.innerHTML; (Result) ('DOM Manipulation <span style="display:none">This is hidden text</span> is taking place...')
+        // value.innertext; (Result) ('DOM Manipulation is taking place...')
+        // document.querySelector --> with variables. --> calling internal tags and giving them value. --> class & id.
+        // Nodelist and HTML Collection is not a pure Array. Because it does'nt contain any map attribute.
+        // QuerySelectorAll is not an array. But its many things looks like an array. whenever we want to change in the specific element in query selector all we have to target that one.
+        // Remove attribute : (document.getElemenetById('eg').removeAttribute('class','headingClass'))
+        // Checking Attribute : document.getElementById('marquee1').hasAttribute('direction');
+
+        // Checking Class List (1. const CCL = document.querySelector('h4'); 2. CCL.classList;)
+        // Add Class = CCL.classList.add('COne');
+        // Remove Class = CCL.classList.remove('CTwo');
+        // Replace Class = CCL.classList.replace('CThree');
+        // Checking Presence of Class = CCL.classList.constains('CFour');
+        // Toggle Property (If class exists it remove either it will add that class) = CCL.classList.toggle('COne');
+
+        // Converting html collection into array by : Array.from(value) It can be done easily by using className.;
+
+        // Traversing the DOM
+        // 1. Parent Node & Parent Element
+        // 2. ChildNodes & Children
+        // 3. Selecting firstChild & lastChild, firstElementChild & lastElementChild
+    </script>
+</head>
+<body class="headingClass handling_body"></body>
+    <h2 id="headingID" class="headingClass bigClass mediumClass smallClass">DOM Manipulation <span style="display:none">This is hidden text</span> is taking place...</h2>
+    <p id="one">First Para.</p>
+    <p id="two">Second Para.</p>
+    <p id="three">Third Para.</p>
+    <p id="four">Fourth Para.</p>
+    <ul>
+        <li>Value1</li>
+        <li>Value2</li>
+        <li>Value3</li>
+        <li>Value4</li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <marquee id="marquee1" behavior="scroll" direction="left" bgColor="Yellow" style="color:black"><h3>Heading of Content</h3><p>This is a dummy content specifying marquee tag.</p></marquee>
+    <h4 class="headingClass COne CTwo CThree CFour CFive">This content is for checking class list.</h4>
+
+</body>
+</html>

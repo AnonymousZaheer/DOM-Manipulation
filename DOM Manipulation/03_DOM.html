@@ -1,0 +1,50 @@
+<!-- Using addeventlistener and function in button-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body style="display: flex; flex-direction: column; row-gap: 10px;">
+
+    <P class="data"></P>
+    <button id="SData">Show Data</button>
+    <button id="HData">Hide Data</button>
+
+    <p class="data1">Access Successfully</p>
+    <button id="opData" onclick="calldata()">Operation on Data</button>
+</body>
+
+<script>
+    let para1 = document.querySelector('.data1');
+    let btn = document.getElementById('opData');
+    function calldata() {
+        if (para1.style.display === 'none'){
+            para1.style.display = 'block';
+            btn.style.color="red";
+        }
+        else{
+            para1.style.display='none';
+            para1.style.color='black';
+            btn.style.color="black";
+            btn.style.marginTop="60px;"
+        }        
+    }
+</script>
+
+<script>
+    const para = document.querySelector(".data");
+
+    const Show = document.getElementById("SData");
+    Show.addEventListener("click", () => {
+        para.textContent="Row Wise Content";
+    });
+
+    const Hide = document.getElementById("HData");
+    Hide.addEventListener("click", () => {
+        para.textContent=" ";
+    });
+</script> 
+</html>
